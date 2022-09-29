@@ -53,10 +53,44 @@ cd code-server-4.7.0-linux-arm64/bin
 참조 :https://idiqpnm.tistory.com/m/7
 ```
 
-#vscode 환경 세팅
+#vscode 접속시 비밀번호 변경
 ```
 - 매번 비밀번호를 입력하기 귀찮음으로 config 파일 수정
+cd ~config/code-server
+vim .config/code-server/config.yaml
+-파일 열어서 비밀번호 수정
+password: 1bc76233f828b459af0a4a6f => password: 1234
 
+참조 : https://hakawati.co.kr/445
+```
 
+#VSCODE NODE 및 GIT 세팅
+```
+*vscode의 터미널에서도 가능
 
+-노드 설치
+sudo apt install nodejs
+
+-설치 확인
+nodejs -v 
+
+-NPM 설치
+sudo apt install npm
+-NPM 업데이트
+npm install -g npm@latest
+
+-GIT 설치
+apt install git
+
+-git 확인
+git --version
+
+-github repository 받기
+git clone 주소
+
+- git 글로벌 변수 설정
+git config --global user.name "이름"
+git config --global user.email 이메일@gmail.com
+
+* vscode 재시작 하면 git 연동됨.
 ```
